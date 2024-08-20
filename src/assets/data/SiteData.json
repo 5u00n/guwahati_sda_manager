@@ -1,0 +1,114 @@
+{
+  "siteTitle": "My Portfolio",
+  "siteDescription": "This is my portfolio site",
+  "siteKeywords": "portfolio, web development, web design",
+  "siteImage": "https://www.myportfolio.com/images/og-image.jpg",
+  "siteLogo": "https://www.myportfolio.com/images/logo.png",
+  "siteFavicon": "https://www.myportfolio.com/images/favicon.ico",
+  "siteAuthor": "John Doe",
+  "email": "email@example.com",
+  "phone1": "123-456-7890",
+  "phone2": "098-765-4321",
+  "address": "1234 Elm St, Springfield, IL 62701",
+  "coordinates": {
+    "latitude": 39.781721,
+    "longitude": -89.650148
+  },
+  "googleMapLink": "https://www.google.com/maps?q=39.781721,-89.650148",
+  "siteSocialLinks": {
+    "facebook": "https://www.facebook.com/myportfolio"
+  },
+  "home": {
+    "title": "Welcome to My Portfolio",
+    "description": "I am a web developer",
+    "hero": {
+      "title": "Welcome to My Portfolio",
+      "description": "I am a web developer",
+      "verse": "For I know the plans I have for you, declares the Lord, plans to prosper you and not to harm you, plans to give you hope and a future. - Jeremiah 29:11",
+      "verseReference": "Jeremiah 29:11",
+      "buttonText": "View My Work",
+      "buttonLink": "/portfolio",
+      "image": "https://www.myportfolio.com/images/hero.jpg"
+    },
+    "about": {
+      "ourCommunity": {
+        "title": "Our Community",
+        "description": "We are a community of web developers",
+        "buttonText": "Learn More",
+        "buttonLink": "/about",
+        "image": "https://www.myportfolio.com/images/community.jpg"
+      },
+      "ourMission": {
+        "title": "Our Mission",
+        "description": "Our mission is to help others",
+        "buttonText": "Learn More",
+        "buttonLink": "/about",
+        "image": "https://www.myportfolio.com/images/mission.jpg"
+      },
+      "joinUs": {
+        "title": "Join Us",
+        "description": "Join us and make a difference",
+        "buttonText": "Learn More",
+        "buttonLink": "/about",
+        "image": "https://www.myportfolio.com/images/join-us.jpg"
+      }
+    }
+  },
+  "about": {
+    "title": "About Us",
+    "description": "I am a web developer",
+    "image": "https://www.myportfolio.com/images/about.jpg",
+    "staff": [
+      {
+        "name": "John Doe",
+        "title": "Web Developer",
+        "image": "https://www.myportfolio.com/images/john-doe.jpg"
+      },
+      {
+        "name": "Jane Doe",
+        "title": "Web Designer",
+        "image": "https://www.myportfolio.com/images/jane-doe.jpg"
+      }
+    ]
+  },
+  "contact": {
+    "title": "Contact US",
+    "description": "Let's get in touch",
+    "buttonText": "Send Message",
+    "buttonLink": "/contact",
+    "image": "https://www.myportfolio.com/images/contact.jpg"
+  },
+  "event": {
+    "title": "Upcoming Events",
+    "description": "Join us at our upcoming events",
+    "events": {
+      "eventID1": {
+        "id": "eventID1",
+        "title": "Event Title 1",
+        "description": "Event Description 1",
+        "date": "2022-01-01",
+        "time": "12:00 PM",
+        "location": "1234 Elm St, Springfield, IL 62701",
+        "image": "https://www.myportfolio.com/images/event1.jpg"
+      },
+      "eventID2": {
+        "id": "eventID2",
+        "title": "Event Title 2",
+        "description": "Event Description 2",
+        "date": "2022-02-02",
+        "time": "1:00 PM",
+        "location": "1234 Elm St, Springfield, IL 62701",
+        "image": "https://www.myportfolio.com/images/event2.jpg"
+      },
+      "eventID3": {
+        "id": "eventID3",
+        "title": "Event Title 3",
+        "description": "Event Description 3",
+        "date": "2022-03-03",
+        "time": "2:00 PM",
+        "location": "1234 Elm St, Springfield, IL 62701",
+        "image": "https://www.myportfolio.com/images/event3.jpg"
+      }
+    }
+  }
+}
