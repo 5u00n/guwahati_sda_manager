@@ -8,6 +8,8 @@ import Global from './pages/Global';
 import Logout from './pages/Logout';
 import Login from './pages/Login';
 import { useInitializeDatabase } from './store/database';
+import Layout from './components/Layout';
+import PrivateRoutes from './utils/PrivateRoutes';
 function App() {
 
   useInitializeDatabase();
@@ -16,17 +18,17 @@ function App() {
 
     <BrowserRouter>
       <Routes>
-      <Route element={<PrivateRoutes/>}>
-      <Route element={<Layout/>}>
-      <Route path="/dashboard" element={<Dashboard />} />
-      </Route>
-      </Route>
+        <Route element={<PrivateRoutes />}>
+          <Route element={<Layout />}>
+            <Route path="/" element={<Global />} />
+            <Route path="/home" element={<Home />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/contact" element={<Contact />} />
+          </Route>
+        </Route>
         <Route path="/login" element={<Login />} />
         <Route path="/logout" element={<Logout />} />
-        <Route path="/" element={<Global />} />
-        <Route path="/home" element={<Home />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/contact" element={<Contact />} />
+
         <Route path="*" element={<NotFound />} />
       </Routes>
     </BrowserRouter>
