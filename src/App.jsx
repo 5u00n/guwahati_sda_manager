@@ -5,8 +5,8 @@ import About from './pages/About'
 import Contact from './pages/Contact'
 import NotFound from './pages/NotFound';
 import Global from './pages/Global';
-import Login from './pages/Login';
 import Logout from './pages/Logout';
+import Login from './pages/Login';
 import { useInitializeDatabase } from './store/database';
 function App() {
 
@@ -16,6 +16,11 @@ function App() {
 
     <BrowserRouter>
       <Routes>
+      <Route element={<PrivateRoutes/>}>
+      <Route element={<Layout/>}>
+      <Route path="/dashboard" element={<Dashboard />} />
+      </Route>
+      </Route>
         <Route path="/login" element={<Login />} />
         <Route path="/logout" element={<Logout />} />
         <Route path="/" element={<Global />} />
