@@ -1,5 +1,3 @@
-
-
 import firebase from "firebase/compat/app";
 
 import "firebase/compat/auth";
@@ -28,6 +26,11 @@ class FirebaseAuthBackend {
    *
    * -----------------------------------------------------------------------------------------------------------------------------------------
    */
+
+
+  auth=()=>firebase.auth();
+
+  
 
   createSuperAdminUser = async (uid, user) => {
     return new Promise((resolve, reject) => {
@@ -184,26 +187,6 @@ class FirebaseAuthBackend {
 
 
 
-  addNewUserToFirestore = (user) => {
-    const collection = firebase.firestore().collection("users");
-    const { profile } = user.additionalUserInfo;
-    const details = {
-      firstName: profile.given_name ? profile.given_name : profile.first_name,
-      lastName: profile.family_name ? profile.family_name : profile.last_name,
-      fullName: profile.name,
-      email: profile.email,
-      picture: profile.picture,
-      createdDtm: firebase.firestore.FieldValue.serverTimestamp(),
-      lastLoginTime: firebase.firestore.FieldValue.serverTimestamp(),
-    };
-    collection.doc(firebase.auth().currentUser.uid).set(details);
-    return { user, details };
-  };
-
-  setLoggeedInUser = (user) => {
-    localStorage.setItem("authUser", JSON.stringify(user));
-  };
-
   /**
    * Returns the authenticated user
    */
@@ -257,6 +240,16 @@ class FirebaseAuthBackend {
       return firebase.database().ref(path);
     }
   };
+
+  getDatabaseData = async () => {
+    return new Promise((resolve, reject) => {
+      const databaseRef = firebase.database().ref();
+      databaseRef.on("value", (snapshot) => {
+        resolve(snapshot.val());
+      });
+    });
+  }
+
 
 
 

@@ -2,11 +2,17 @@ import { useEffect, useState, createContext } from "react";
 import { getFirebaseBackend } from "../helper/firebase_helper"; // Import Firebase auth module
 
 import { Spinner } from "flowbite-react";
+
+import PropTypes from "prop-types";
 // Create a context for the auth state
 export const AuthContext = createContext();
 
 // Create a provider component for the auth context
-export const AuthProvider = (children) => {
+export const AuthProvider = ({children}) => {
+  // Add prop validation for 'children'
+  AuthProvider.propTypes = {
+    children: PropTypes.node.isRequired
+  };
   const [currentUser, setCurrentUser] = useState(null);
   const [loading, setLoading] = useState(true);
 
