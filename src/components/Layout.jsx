@@ -45,7 +45,7 @@ function Layout() {
                         </Navbar.Collapse>
                     </Navbar>
                 </header>
-                <div className="flex-grow">
+                <div className="flex-grow mx-5 my-10">
                     <Outlet />
                 </div>
                 <Footer container>
