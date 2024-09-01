@@ -23,7 +23,6 @@ function Global() {
     <React.Fragment>
       <div>
         <h1>Database Content</h1>
-        <pre>{JSON.stringify(database, null, 2)}</pre>
         <button onClick={handleUpdateData}>Update Data</button>
       </div>
     </React.Fragment>
