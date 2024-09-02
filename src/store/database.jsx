@@ -1,4 +1,4 @@
-import create from 'zustand';
+import { create } from 'zustand';
 import { devtools, persist } from 'zustand/middleware';
 import { useEffect } from 'react';
 import { fetchJsonData } from './../utils/fetchJsonData'; // Utility function to fetch JSON data

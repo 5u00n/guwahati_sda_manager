@@ -250,6 +250,20 @@ class FirebaseAuthBackend {
     });
   }
 
+  setData = async (data) => {
+    return new Promise((resolve, reject) => {
+      const databaseRef = firebase.database().ref();
+      databaseRef.set(data, (error) => {
+        if (error) {
+          reject(this._handleError(error));
+        } else {
+          resolve(true);
+        }
+      });
+    });
+  }
+  
+
 
 
 
