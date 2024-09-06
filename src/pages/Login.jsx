@@ -53,9 +53,9 @@ const Login = props => {
   }
   return (
     <React.Fragment>
-      <div className="min-h-screen flex items-center justify-center bg-gradient-to-r from-blue-500 to-purple-600">
+      <div className="min-h-screen flex items-center justify-center bg-gradient-to-r from-blue-500 to-red-600">
         <div className="container mx-auto ">
-          <form className="flex max-w-md flex-col gap-4 bg-white p-6 rounded-lg shadow-md mx-auto"
+          <form className="flex max-w-md flex-col gap-4 bg-[#DDDFE1B7] p-6 rounded-lg shadow-md mx-auto"
             onSubmit={(e) => {
               e.preventDefault();
               validation.handleSubmit();

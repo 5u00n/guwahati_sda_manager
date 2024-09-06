@@ -24,13 +24,10 @@ function Layout() {
                                 }
                             >
                                 <Dropdown.Header>
-                                    <span className="block text-sm">Bonnie Green</span>
-                                    <span className="block truncate text-sm font-medium">name@flowbite.com</span>
+                                    <span className="block text-sm">Guwahati SDA Church</span>
+                                    <span className="block truncate text-sm font-medium">guwahatisdachurch@gmail.com</span>
                                 </Dropdown.Header>
-                                <Dropdown.Item>Dashboard</Dropdown.Item>
-                                <Dropdown.Item>Settings</Dropdown.Item>
-                                <Dropdown.Item>Earnings</Dropdown.Item>
-                                <Dropdown.Divider />
+
                                 <Dropdown.Item>Sign out</Dropdown.Item>
                             </Dropdown>
                             <Navbar.Toggle />
@@ -39,6 +36,7 @@ function Layout() {
                             <Navbar.Link href="/" active>
                                 Home
                             </Navbar.Link>
+                            <Navbar.Link href="/events">Events</Navbar.Link>
                             <Navbar.Link href="/about">About</Navbar.Link>
                             <Navbar.Link href="/contacts">Contacts</Navbar.Link>
                             <Navbar.Link href="/globals">Globals</Navbar.Link>

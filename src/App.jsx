@@ -11,6 +11,7 @@ import { useInitializeDatabase } from './store/database';
 import Layout from './components/Layout';
 import PrivateRoutes from './utils/PrivateRoutes';
 import { initFirebaseBackend } from './helper/firebase_helper';
+import Events from './pages/Events';
 
 
 
@@ -39,6 +40,7 @@ function App() {
         <Route element={<PrivateRoutes />}>
           <Route element={<Layout />}>
             <Route path="/" element={<Home />} />
+            <Route path="/events" element={<Events/>} />
             <Route path="/globals" element={<Global/>} />
             <Route path="/about" element={<About />} />
             <Route path="/contact" element={<Contact />} />

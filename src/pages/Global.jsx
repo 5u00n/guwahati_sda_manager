@@ -21,7 +21,9 @@ function Global() {
       aboutChurch: '',
       phone1: '',
       phone2: '',
-      email: ''
+      email: '',
+      address: '',
+      timing: '',
     },
     onSubmit: values => {
       const newData = { ...database, ...values };
@@ -38,6 +40,8 @@ function Global() {
         phone1: database.phone1 || '',
         phone2: database.phone2 || '',
         email: database.email || '',
+        address: database.address || '',
+        timing: database.timing || '',
       });
     }
   }, [database]);
@@ -101,6 +105,29 @@ function Global() {
               onChange={globalForm.handleChange}
               onBlur={globalForm.handleBlur}
               defaultValue={globalForm.values.email}
+            />
+          </div>
+
+          <div className='mb-4'>
+            <div className="mb-2 block mt-4">
+              <Label htmlFor="address" value="Edit Church Address." />
+            </div>
+            <Textarea className=' h-[100px]' id="address" type="text" sizing="sm"
+              onChange={globalForm.handleChange}
+              onBlur={globalForm.handleBlur}
+              defaultValue={globalForm.values.address}
+              name='address'
+            />
+          </div>
+
+          <div className='mb-4'>
+            <div className="mb-2 block mt-4">
+              <Label htmlFor="timing" value="Edit Church Timing." />
+            </div>
+            <TextInput id="timing" type="text" sizing="sm" name='timing'
+              onChange={globalForm.handleChange}
+              onBlur={globalForm.handleBlur}
+              defaultValue={globalForm.values.timing}
             />
           </div>
 
