@@ -15,7 +15,7 @@ function Contact() {
             mapUrlHTML: "",
         },
         onSubmit: (values) => {
-          setContactDataToFirebase(values);
+            setContactDataToFirebase(values);
         },
     });
 

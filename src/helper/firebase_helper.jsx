@@ -392,7 +392,7 @@ class FirebaseAuthBackend {
 
             updateData().catch(reject);
         });
-    }
+    };
 
     /**
      * Handle the error
