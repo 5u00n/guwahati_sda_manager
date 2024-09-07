@@ -394,6 +394,35 @@ class FirebaseAuthBackend {
         });
     };
 
+    updateAboutData = async (aboutData) => {
+        return new Promise((resolve, reject) => {
+            const updateData = async () => {
+                const databaseRef = firebase.database().ref().child("about");
+
+                try {
+                    // Wait for all image uploads to complete
+                    if (aboutData.imageFile) {
+                        const imageURL = await this.uploadImageGetURL(aboutData.imageFile, "about/aboutHero.jpg");
+                        aboutData.image = imageURL;
+                        aboutData.imageFile = "";
+                    }
+
+                    databaseRef.set(aboutData, (error) => {
+                        if (error) {
+                            reject(this._handleError(error));
+                        } else {
+                            resolve(this.getDatabaseData());
+                        }
+                    });
+                } catch (error) {
+                    reject(this._handleError(error));
+                }
+            };
+
+            updateData().catch(reject);
+        });
+    };
+
     /**
      * Handle the error
      * @param {*} error
