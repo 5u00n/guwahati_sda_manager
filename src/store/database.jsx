@@ -60,6 +60,15 @@ const useDatabase = create(
                         console.error("Failed to set events data to Firebase:", error);
                     }
                 },
+                setContactDataToFirebase: async (contactData) => {
+                    try {
+                        const firebaseBackend = getFirebaseBackend();
+                        const data = await firebaseBackend.updateContactData(contactData);
+                        set({ database: data });
+                    } catch (error) {
+                        console.error("Failed to set contact data to Firebase:", error);
+                    }
+                },
             }),
             {
                 name: "database", // name of the item in the storage (must be unique)

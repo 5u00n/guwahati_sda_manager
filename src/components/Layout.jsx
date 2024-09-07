@@ -38,7 +38,7 @@ function Layout() {
                             </Navbar.Link>
                             <Navbar.Link href="/events">Events</Navbar.Link>
                             <Navbar.Link href="/about">About</Navbar.Link>
-                            <Navbar.Link href="/contacts">Contacts</Navbar.Link>
+                            <Navbar.Link href="/contact">Contact</Navbar.Link>
                             <Navbar.Link href="/globals">Globals</Navbar.Link>
                         </Navbar.Collapse>
                     </Navbar>
