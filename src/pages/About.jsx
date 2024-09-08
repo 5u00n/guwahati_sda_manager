@@ -141,6 +141,25 @@ function About() {
                                     <h4 className="  block text-gray-700  mb-4" htmlFor={`leaders.${index}`}>
                                         LEADER {index + 1}
                                     </h4>
+
+                                    <div className="mb-4">
+                                        <label className="block text-gray-700 text-sm font-bold " htmlFor={`leaders.${index}.image`}>
+                                            Image
+                                        </label>
+                                        <img src={leader.image} alt="Leader" className="w-full" />
+                                        <FileInput
+                                            id={`leaders.${index}.image`}
+                                            name={`leaders.${index}.image`}
+                                            className=" mt-2 mb-2"
+                                            helperText="Upload JPG Files only (MAX. 800x400px)."
+                                            accept="image/jpeg"
+                                            onChange={(e) => {
+                                                aboutForm.setFieldValue(`leaders.${leader.id}.imageFile`, e.currentTarget.files[0]);
+                                                aboutForm.setFieldValue(`leaders.${leader.id}.image`, URL.createObjectURL(e.currentTarget.files[0]));
+                                            }}
+                                        />
+                                    </div>
+
                                     <div className="mb-4">
                                         <label className="block text-gray-700 text-sm font-bold " htmlFor={`leaders.${index}.name`}>
                                             Name

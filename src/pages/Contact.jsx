@@ -4,7 +4,7 @@ import { useDatabase } from "../store/database";
 import { useFormik } from "formik";
 
 function Contact() {
-    const { contactDatabase, setContactDataToFirebase } = useDatabase((state) => ({ database: state.database.contact, setContactDataToFirebase: state.setContactDataToFirebase }));
+    const { contactDatabase, setContactDataToFirebase } = useDatabase((state) => ({ contactDatabase: state.database.contact, setContactDataToFirebase: state.setContactDataToFirebase }));
 
     const contactForm = useFormik({
         initialValues: {
@@ -25,6 +25,8 @@ function Contact() {
             contactForm.setFieldValue("mapUrlHTML", contactDatabase.mapUrlHTML);
             contactForm.setFieldValue("mapUrl", contactDatabase.mapUrl);
             contactForm.setFieldValue("image", contactDatabase.image);
+            contactForm.setFieldValue("imageFile", contactDatabase.imageFile);
+            contactForm.setFieldValue("mapUrlHTML", contactDatabase.mapUrlHTML);
         }
     }, [contactDatabase]);
 
@@ -69,7 +71,12 @@ function Contact() {
                     <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="contactMessage">
                         Contact Message
                     </label>
-                    <Textarea id="contactMessage" placeholder="Enter your message here" />
+                    <Textarea id="contactMessage" placeholder="Enter your message here"
+                        value={contactForm.values.contactMessage}
+                        onChange={contactForm.handleChange}
+                        onBlur={contactForm.handleBlur}
+                        name="contactMessage"
+                    />
                 </div>
 
                 <div className="mb-4">
